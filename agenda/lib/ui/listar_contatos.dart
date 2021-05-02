@@ -1,34 +1,28 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+class ListarContato extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber,
-      appBar: AppBar(
-        title: Text('Agenda de Contatos'),
-      ),
+      appBar: AppBar(title: Text('Cadastrar Novo Contato')),
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ElevatedButton(
-            child: Text('Cadastrar Novo Contato'),
+            child: Text('Voltar para o menu inicial'),
             onPressed: () {
-              //Navegar para tela usando rota nomeada
-              Navigator.pushNamed(context, '/tela2');
+              //Navegar para tela anterior
+              Navigator.pop(context);
             },
           ),
-          SizedBox(
-            height: 15.0,
-          ),
           ElevatedButton(
-            child: Text('Listar contatos'),
+            child: Text('Próximo'),
             onPressed: () {
               Navigator.pushNamed(context, '/tela3');
             },
-          )
+          ),
         ],
       )),
     );
