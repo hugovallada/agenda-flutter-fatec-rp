@@ -13,9 +13,7 @@ class ContatoWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      //margin: EdgeInsets.all(20),
-      //margin: EdgeInsets.symmetric(horizontal: 20),
-      //margin: EdgeInsets.symmetric(vertical: 20),
+  
       margin: EdgeInsets.fromLTRB(20, 20, 20, 0),
       padding: EdgeInsets.all(50),
 

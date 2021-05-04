@@ -1,3 +1,4 @@
+import 'package:agenda/contato.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,8 @@ class NovoContatoC extends StatefulWidget {
 }
 
 class NovoContato extends State<NovoContatoC> {
+  final myControllerNome = TextEditingController();
+  final myControllerTelefone = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,6 +36,7 @@ class NovoContato extends State<NovoContatoC> {
               //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
+                controller: myControllerNome,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Nome',
@@ -44,6 +48,7 @@ class NovoContato extends State<NovoContatoC> {
                   left: 15.0, right: 15.0, top: 15, bottom: 0),
               //padding: EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
+                controller: myControllerTelefone,
                 obscureText: false,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
@@ -61,6 +66,8 @@ class NovoContato extends State<NovoContatoC> {
                   color: Colors.blue, borderRadius: BorderRadius.circular(20)),
               child: ElevatedButton(
                 onPressed: () {
+                  ContatoWidget contato = new ContatoWidget(
+                      myControllerNome.text, myControllerTelefone.text);
                   Navigator.pushNamed(context, "/tela1");
                 },
                 child: Text(
