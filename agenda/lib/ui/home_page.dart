@@ -5,9 +5,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Agenda de Contatos'),
+        title: Text("Agenda de contatos"),
       ),
       body: Center(
           child: Column(

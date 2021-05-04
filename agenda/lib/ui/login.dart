@@ -1,18 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class NovoContatoC extends StatefulWidget {
+class LoginF extends StatefulWidget {
   @override
-  NovoContato createState() => NovoContato();
+  Login createState() => Login();
 }
 
-class NovoContato extends State<NovoContatoC> {
+class Login extends State<LoginF> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Cadastrar Contato"),
+        title: Text("Login"),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -35,8 +35,8 @@ class NovoContato extends State<NovoContatoC> {
               child: TextField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'Nome',
-                    hintText: 'Digite o nome do contato aqui'),
+                    labelText: 'Email',
+                    hintText: 'Enter valid email id as abc@gmail.com'),
               ),
             ),
             Padding(
@@ -44,11 +44,11 @@ class NovoContato extends State<NovoContatoC> {
                   left: 15.0, right: 15.0, top: 15, bottom: 0),
               //padding: EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
-                obscureText: false,
+                obscureText: true,
                 decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'Telefone',
-                    hintText: 'Entre o número de telefone'),
+                    labelText: 'Password',
+                    hintText: 'Enter secure password'),
               ),
             ),
             SizedBox(
@@ -64,7 +64,7 @@ class NovoContato extends State<NovoContatoC> {
                   Navigator.pushNamed(context, "/tela1");
                 },
                 child: Text(
-                  'Cadastrar',
+                  'Login',
                   style: TextStyle(color: Colors.white, fontSize: 25),
                 ),
               ),
@@ -72,6 +72,7 @@ class NovoContato extends State<NovoContatoC> {
             SizedBox(
               height: 130,
             ),
+            Text('New User? Create Account')
           ],
         ),
       ),
