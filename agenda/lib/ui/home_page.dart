@@ -28,7 +28,15 @@ class HomePage extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, '/tela3');
             },
-          )
+          ),
+          SizedBox(
+            height: 15.0,
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/tela4');
+              },
+              child: Text('Sobre'))
         ],
       )),
     );
