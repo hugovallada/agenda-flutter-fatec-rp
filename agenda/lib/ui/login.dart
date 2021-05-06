@@ -61,7 +61,7 @@ class Login extends State<LoginF> {
                   color: Colors.blue, borderRadius: BorderRadius.circular(20)),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, "/tela1");
+                  Navigator.pushNamed(context, "/home");
                 },
                 child: Text(
                   'Login',

@@ -17,10 +17,10 @@ void main() {
     initialRoute: '/login',
     routes: {
       '/login': (context) => LoginF(),
-      '/tela1': (context) => HomePage(),
-      '/tela2': (context) => NovoContatoC(),
-      '/tela3': (context) => ListarContato(),
-      '/tela4': (context) => Sobre(),
+      '/home': (context) => HomePage(),
+      '/novo': (context) => NovoContatoC(),
+      '/listar': (context) => ListarContato(),
+      '/sobre': (context) => Sobre(),
     },
   ));
 }

@@ -68,7 +68,25 @@ class NovoContato extends State<NovoContatoC> {
                 onPressed: () {
                   ContatoWidget contato = new ContatoWidget(
                       myControllerNome.text, myControllerTelefone.text);
-                  Navigator.pushNamed(context, "/tela1");
+
+                  showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: new Text("Cadastrado"),
+                          content: new Text(
+                              "Usuário cadastrado. Você já pode listá-lo"),
+                          actions: [
+                            new ElevatedButton(
+                                child: new Text("Fechar"),
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                })
+                          ],
+                        );
+                      });
+
+                  Navigator.pushNamed(context, "/home");
                 },
                 child: Text(
                   'Cadastrar',

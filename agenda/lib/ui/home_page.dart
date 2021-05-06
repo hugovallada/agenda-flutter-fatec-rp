@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
             child: Text('Cadastrar Novo Contato'),
             onPressed: () {
               //Navegar para tela usando rota nomeada
-              Navigator.pushNamed(context, '/tela2');
+              Navigator.pushNamed(context, '/novo');
             },
           ),
           SizedBox(
@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
           ElevatedButton(
             child: Text('Listar contatos'),
             onPressed: () {
-              Navigator.pushNamed(context, '/tela3');
+              Navigator.pushNamed(context, '/listar');
             },
           ),
           SizedBox(
@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
           ),
           ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/tela4');
+                Navigator.pushNamed(context, '/sobre');
               },
               child: Text('Sobre'))
         ],
