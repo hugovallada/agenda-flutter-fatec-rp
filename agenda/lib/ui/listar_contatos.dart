@@ -19,7 +19,7 @@ class ListarContato extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Carros')),
+      appBar: AppBar(title: Text('Contatos')),
       body: ListView.builder(
         itemCount: contatos.length,
         itemBuilder: (context, index) {
