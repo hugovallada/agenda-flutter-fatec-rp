@@ -36,7 +36,15 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/sobre');
               },
-              child: Text('Sobre'))
+              child: Text('Sobre')),
+              SizedBox(
+            height: 15.0,
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/finalizar');
+              },
+              child: Text('Sair'))
         ],
       )),
     );

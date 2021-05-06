@@ -1,3 +1,4 @@
+import 'package:agenda/ui/finalizar.dart';
 import 'package:agenda/ui/home_page.dart';
 import 'package:agenda/ui/listar_contatos.dart';
 import 'package:agenda/ui/login.dart';
@@ -21,6 +22,7 @@ void main() {
       '/novo': (context) => NovoContatoC(),
       '/listar': (context) => ListarContato(),
       '/sobre': (context) => Sobre(),
+      '/finalizar': (context) => Finalizar()
     },
   ));
 }
