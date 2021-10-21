@@ -6,6 +6,6 @@ class Sobre extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text('Sobre')),
-        body: Center(child: Text("Lista de contatos\nO objetivo deste aplicativo é permitir que usuários sejam cadastrados e posteriormente listados\nDesenvolvedores: Hugo Lopes e Giovanna Monteiro")));
+        body: Center(child: Text("O objetivo deste aplicativo é permitir que usuários sejam cadastrados e posteriormente listados\nDesenvolvedores: Hugo Lopes e Giovanna Monteiro")));
   }
 }
