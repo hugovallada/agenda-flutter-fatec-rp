@@ -24,7 +24,6 @@ class NovoContato extends State<NovoContatoC> {
               padding: const EdgeInsets.only(top: 60.0),
             ),
             Padding(
-              //padding: const EdgeInsets.only(left:15.0,right: 15.0,top:0,bottom: 0),
               padding: EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
                 controller: myControllerNome,
@@ -37,7 +36,6 @@ class NovoContato extends State<NovoContatoC> {
             Padding(
               padding: const EdgeInsets.only(
                   left: 15.0, right: 15.0, top: 15, bottom: 0),
-              //padding: EdgeInsets.symmetric(horizontal: 15),
               child: TextField(
                 controller: myControllerTelefone,
                 obscureText: false,

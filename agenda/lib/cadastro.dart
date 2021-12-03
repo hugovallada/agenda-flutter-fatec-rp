@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class Cadastro extends StatefulWidget {
@@ -16,7 +18,6 @@ class _CadastroState extends State<Cadastro> {
  title: Text('Cadastro', style: TextStyle(fontFamily: 'fontelight')),
  centerTitle: true,
  backgroundColor: Colors.blue[600]),
- drawer: Menu(),
  backgroundColor: Colors.blue[100],
  body: Container(
  padding: EdgeInsets.all(50),
@@ -54,7 +55,7 @@ class _CadastroState extends State<Cadastro> {
  Container(
  width: 150,
  child: OutlinedButton(
- child: Text('Criar', style: TextStyle(fontFamily: 'fontelight', color: Colors.green[900], fontWeight:FontWeight.w700),),
+ child: Text('Criar', style: TextStyle(fontFamily: 'fontelight', color: Colors.blue[600], fontWeight:FontWeight.w700),),
  onPressed: () {
  criarConta(txtNome.text, txtEmail.text, txtSenha.text);
  },
@@ -63,7 +64,7 @@ class _CadastroState extends State<Cadastro> {
  Container(
  width: 150,
  child: OutlinedButton(
- child: Text('Cancelar', style: TextStyle(fontFamily: 'fontelight', color: Colors.green[900], 
+ child: Text('Cancelar', style: TextStyle(fontFamily: 'fontelight', color: Colors.blue[600], 
 fontWeight:FontWeight.w700),),
  onPressed: () {
  Navigator.pop(context);
@@ -85,7 +86,7 @@ fontWeight:FontWeight.w700),),
  email: email, password: senha).then((resultado){
  //Armazenar dados adicionais no Firestore
  var db = FirebaseFirestore.instance;
- db.collection('usuarios').doc(resultado.user!.uid).set(
+ db.collection('usuarios').doc(resultado.user.uid).set(
  {
  'Nome' : nome,
  'Email' : email,

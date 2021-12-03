@@ -1,10 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ContatoWidget extends StatelessWidget {
   //declaração dos atributos
-  final String nome;
-  final String telefone;
+  String nome;
+  String telefone;
 
   //construtor
   ContatoWidget(this.nome, this.telefone) : super();
@@ -38,4 +39,33 @@ class ContatoWidget extends StatelessWidget {
       )),
     );
   }
-}
+
+  void getDocumentById(String id) async{
+ await FirebaseFirestore.instance
+ .collection('agenda').doc(id).get()
+ .then((valor){
+ nome = valor.get('nome');
+ telefone = valor.get('telefone');
+ });
+ }
+
+@override
+ Widget buildContato(BuildContext context) {
+
+ var id = ModalRoute.of(context)?.settings.arguments;
+ if (id != null){
+ 
+ if(nome == '' && telefone == ''){
+ getDocumentById(id.toString());
+ }
+ }
+ return Scaffold(
+ appBar: AppBar(
+ 
+ title: Text('Meus contatos', style: TextStyle(fontFamily: 'fontelight'),),
+ centerTitle: true,
+ backgroundColor: Colors.blue[600],
+ automaticallyImplyLeading: false,
+ 
+ ));
+}}
